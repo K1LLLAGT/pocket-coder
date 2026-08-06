@@ -240,6 +240,62 @@ a {
   font-size: 0.9rem;
 }
 
+.page {
+  padding: 64px 0 96px;
+}
+
+.page__inner {
+  max-width: 720px;
+
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin: 0 0 8px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin: 40px 0 12px;
+  }
+
+  p,
+  li {
+    color: $text-muted;
+    line-height: 1.7;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+}
+
+.page__updated {
+  color: $text-muted;
+  font-size: 0.9rem;
+  margin: 0 0 32px;
+}
+
+.not-found {
+  padding: 120px 0;
+  text-align: center;
+
+  &__logo {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 24px;
+    opacity: 0.8;
+  }
+
+  h1 {
+    font-size: 4rem;
+    margin: 0 0 12px;
+  }
+
+  p {
+    color: $text-muted;
+    margin: 0 0 32px;
+  }
+}
+
 @media (max-width: 640px) {
   .nav__links {
     gap: 12px;

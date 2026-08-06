@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy — PocketCoder</title>
+    <meta
+      name="description"
+      content="PocketCoder's privacy policy: what data we collect (very little), what stays on your device, and how our optional local AI and P2P features work."
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/src/style.scss" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="/#top">
+          <img src="/logo.svg" alt="PocketCoder logo" class="brand__logo" />
+          <span class="brand__name">PocketCoder</span>
+        </a>
+        <nav class="nav__links">
+          <a href="/#features">Features</a>
+          <a href="/#roadmap">Roadmap</a>
+          <a href="/#get-involved">Get Involved</a>
+          <a
+            class="btn btn--ghost"
+            href="https://github.com/K1LLLAGT/pocket-coder"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page">
+        <div class="container page__inner">
+          <h1>Privacy Policy</h1>
+          <p class="page__updated">Last updated: 2026</p>
+
+          <p>
+            PocketCoder is built to be privacy-first by design. This page
+            describes what happens to your code and data when you use the
+            app, and what (very little) this marketing site collects.
+          </p>
+
+          <h2>The PocketCoder app</h2>
+          <ul>
+            <li>
+              <strong>Your code stays on your device.</strong> Projects,
+              files, and settings are stored locally on your phone or
+              tablet — PocketCoder does not upload your code to any server
+              by default.
+            </li>
+            <li>
+              <strong>On-device execution.</strong> Language runtimes (such
+              as Pyodide for Python) run entirely inside the app's sandboxed
+              webview. No code is sent off-device to run it.
+            </li>
+            <li>
+              <strong>Optional local AI assistance.</strong> Any AI code
+              suggestions use a model file you supply yourself and run via
+              an on-device inference bridge. Your code and prompts are not
+              sent to a remote inference server.
+            </li>
+            <li>
+              <strong>Optional P2P collaboration.</strong> Real-time
+              collaboration features use direct peer-to-peer connections
+              (WebRTC) for the editing session itself. A signaling/relay
+              server may be used only to help peers find each other, and
+              does not see your file contents.
+            </li>
+            <li>
+              <strong>Plugins.</strong> Community plugins run in a
+              sandboxed context. See
+              <a
+                href="https://github.com/K1LLLAGT/pocket-coder/blob/main/SECURITY.md"
+                target="_blank"
+                rel="noopener"
+                >SECURITY.md</a
+              >
+              for details on the plugin and model trust model.
+            </li>
+          </ul>
+
+          <h2>This website (pocket-coder.ai)</h2>
+          <p>
+            This marketing site is a static page with no backend, no
+            accounts, and no tracking scripts. Your static host provider
+            (e.g. Netlify, Vercel, GitHub Pages, or Cloudflare Pages) may
+            collect standard server access logs (such as IP address and
+            requested URL) as part of normal web hosting — PocketCoder does
+            not add any additional analytics or third-party trackers on top
+            of that.
+          </p>
+
+          <h2>Questions</h2>
+          <p>
+            This project is community-run and provided as-is. If you have
+            questions about privacy or want to report a concern, please
+            <a
+              href="https://github.com/K1LLLAGT/pocket-coder/issues"
+              target="_blank"
+              rel="noopener"
+              >open an issue</a
+            >
+            on GitHub.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          PocketCoder is forked from
+          <a href="https://github.com/Acode-Foundation/Acode" target="_blank" rel="noopener"
+            >Acode</a
+          >, MIT licensed. &copy; <span id="year"></span> PocketCoder contributors.
+          &middot; <a href="/privacy.html">Privacy</a>
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

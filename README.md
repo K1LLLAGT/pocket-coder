@@ -61,8 +61,15 @@ How to help
 Funding / sustainability
 ------------------------
 Core project remains free. Suggested models:
-- Donations (Open Collective / GitHub Sponsors)
+- Donations (Open Collective / GitHub Sponsors) — see [.github/FUNDING.yml](.github/FUNDING.yml) / the "Sponsor" button on GitHub.
 - Optional paid hosting for auxiliary services (relay/signaling servers, optional cloud inference) — core features always free.
+
+Security & privacy
+-------------------
+See [SECURITY.md](SECURITY.md) for how to report a vulnerability and the
+trust model for plugins/local models, and the
+[marketing site's privacy page](website/privacy.html) for what data (if any)
+is collected.
 
 Contact
 -------

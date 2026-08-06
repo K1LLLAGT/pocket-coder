@@ -21,6 +21,7 @@ local.properties
 tsconfig.tsbuildinfo
 .dev-cert.pem
 .dev-key.pem
+/website/dist
 
 /www/cordova.js
 /www/cordova_plugins.js

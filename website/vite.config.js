@@ -9,6 +9,15 @@ export default defineConfig({
   build: {
     outDir: "dist",
     emptyOutDir: true,
+    rollupOptions: {
+      // Multi-page build: every top-level HTML page needs its own entry
+      // point so Vite bundles and copies it into dist/.
+      input: {
+        main: `${import.meta.dirname}/index.html`,
+        privacy: `${import.meta.dirname}/privacy.html`,
+        notFound: `${import.meta.dirname}/404.html`,
+      },
+    },
   },
   server: {
     port: 4173,

@@ -1,4 +1,8 @@
 import { defineConfig } from "vite";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const rootDir = path.dirname(fileURLToPath(import.meta.url));
 
 // Standalone build config for the pocket-coder.ai marketing site.
 // This project is intentionally decoupled from the Cordova app's
@@ -13,9 +17,9 @@ export default defineConfig({
       // Multi-page build: every top-level HTML page needs its own entry
       // point so Vite bundles and copies it into dist/.
       input: {
-        main: `${import.meta.dirname}/index.html`,
-        privacy: `${import.meta.dirname}/privacy.html`,
-        notFound: `${import.meta.dirname}/404.html`,
+        main: path.resolve(rootDir, "index.html"),
+        privacy: path.resolve(rootDir, "privacy.html"),
+        notFound: path.resolve(rootDir, "404.html"),
       },
     },
   },

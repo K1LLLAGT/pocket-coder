@@ -1,9 +1,9 @@
-# Acode Development Container
+# PocketCoder Development Container
 #
 # Devcontainer usage: automatic via devcontainer.json
 # Standalone usage:
-#   docker build --target standalone -t acode-dev .devcontainer/
-#   docker run -it -v $(pwd):/workspaces/acode acode-dev
+#   docker build --target standalone -t pocketcoder-dev .devcontainer/
+#   docker run -it -v $(pwd):/workspaces/pocket-coder pocketcoder-dev
 
 FROM mcr.microsoft.com/devcontainers/java:1-21-bullseye AS base
 
@@ -32,10 +32,10 @@ RUN wget -q "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-
 
 ENV PATH="${PATH}:${GRADLE_HOME}/bin"
 
-WORKDIR /workspaces/acode
+WORKDIR /workspaces/pocket-coder
 
-LABEL org.opencontainers.image.authors="Acode Foundation <https://github.com/Acode-Foundation/Acode>"
-LABEL description="Development environment for building Acode - Code Editor for Android"
+LABEL org.opencontainers.image.authors="PocketCoder Maintainers <https://github.com/K1LLLAGT/pocket-coder>"
+LABEL description="Development environment for building PocketCoder"
 
 
 # Devcontainer stage

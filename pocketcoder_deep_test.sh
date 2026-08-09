@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-BASE=~/pocketcoder_logs/acode_deep
+BASE=~/pocketcoder_logs/pocketcoder_deep
 mkdir -p "$BASE"
 
 echo "[*] Collecting Android logs..."
@@ -20,7 +20,7 @@ echo "[*] Collecting Termux environment..."
 echo "[*] Capturing installed apps..."
 pm list packages -f > "$BASE/packages.txt"
 
-echo "[*] Capturing Acode-specific logs..."
-grep -i acode "$BASE/logcat.txt" > "$BASE/acode-filtered.txt" || true
+echo "[*] Capturing PocketCoder-specific logs..."
+grep -i pocketcoder "$BASE/logcat.txt" > "$BASE/pocketcoder-filtered.txt" || true
 
 echo "[*] Deep test complete. Logs saved to $BASE"

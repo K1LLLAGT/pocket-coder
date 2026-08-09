@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PocketCoder — Code anywhere. Offline-first. Community-first.</title>
+    <meta
+      name="description"
+      content="PocketCoder is a free, mobile-first code editor and on-device dev environment. Offline-first, privacy-respecting, and community-built."
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/src/style.scss" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#top">
+          <img src="/logo.svg" alt="PocketCoder logo" class="brand__logo" />
+          <span class="brand__name">PocketCoder</span>
+        </a>
+        <nav class="nav__links">
+          <a href="#features">Features</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#get-involved">Get Involved</a>
+          <a
+            class="btn btn--ghost"
+            href="https://github.com/K1LLLAGT/pocket-coder"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero__inner">
+          <img src="/logo.svg" alt="" class="hero__logo" aria-hidden="true" />
+          <h1>Code anywhere.<br />Offline-first. Community-first.</h1>
+          <p class="hero__lede">
+            PocketCoder is a free, mobile-first code editor and on-device dev
+            environment — a community-built, MIT-licensed project focused on
+            privacy, offline execution, and learning from your pocket.
+          </p>
+          <div class="hero__actions">
+            <a
+              class="btn btn--primary"
+              href="https://github.com/K1LLLAGT/pocket-coder"
+              target="_blank"
+              rel="noopener"
+              >View on GitHub</a
+            >
+            <a class="btn btn--ghost" href="#get-involved">Get Involved</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container">
+          <h2>Key features</h2>
+          <ul class="features__grid">
+            <li class="feature-card">
+              <h3>Mobile-optimized editor</h3>
+              <p>A lightweight code editor built for touch screens and small displays.</p>
+            </li>
+            <li class="feature-card">
+              <h3>Live web preview</h3>
+              <p>Preview HTML/CSS/JS projects instantly, right inside the app.</p>
+            </li>
+            <li class="feature-card">
+              <h3>On-device Python</h3>
+              <p>Run Python scripts locally via Pyodide — no server required.</p>
+            </li>
+            <li class="feature-card">
+              <h3>Optional local AI assistance</h3>
+              <p>
+                Bring your own model for on-device, offline code suggestions
+                (llama.cpp/ggml) — your code never leaves your device.
+              </p>
+            </li>
+            <li class="feature-card">
+              <h3>P2P collaboration</h3>
+              <p>CRDT-based real-time editing (Yjs + WebRTC) for privacy-first pairing.</p>
+            </li>
+            <li class="feature-card">
+              <h3>Plugin architecture</h3>
+              <p>Extend PocketCoder with community-built plugins and runtimes.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="roadmap" class="roadmap">
+        <div class="container">
+          <h2>Where we're headed</h2>
+          <ol class="roadmap__list">
+            <li><strong>MVP-1</strong> — Web preview &amp; project management</li>
+            <li><strong>MVP-2</strong> — Local language runtimes (Pyodide, WASM)</li>
+            <li><strong>MVP-3</strong> — Optional local AI assistance (alpha)</li>
+            <li><strong>MVP-4</strong> — P2P collaboration (Yjs + WebRTC)</li>
+            <li><strong>MVP-5</strong> — Accessibility, polish, and lessons</li>
+          </ol>
+          <p>
+            See the full
+            <a
+              href="https://github.com/K1LLLAGT/pocket-coder/blob/main/ROADMAP.md"
+              target="_blank"
+              rel="noopener"
+              >ROADMAP.md</a
+            >
+            for details.
+          </p>
+        </div>
+      </section>
+
+      <section id="get-involved" class="get-involved">
+        <div class="container">
+          <h2>Get involved</h2>
+          <p>
+            PocketCoder is community-built and free forever. Try the app,
+            file issues, submit PRs, or build a plugin.
+          </p>
+          <div class="hero__actions">
+            <a
+              class="btn btn--primary"
+              href="https://github.com/K1LLLAGT/pocket-coder/issues"
+              target="_blank"
+              rel="noopener"
+              >Browse open issues</a
+            >
+            <a
+              class="btn btn--ghost"
+              href="https://github.com/K1LLLAGT/pocket-coder/blob/main/CONTRIBUTING.md"
+              target="_blank"
+              rel="noopener"
+              >Contributing guide</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          PocketCoder is forked from
+          <a href="https://github.com/Acode-Foundation/Acode" target="_blank" rel="noopener"
+            >Acode</a
+          >, MIT licensed. &copy; <span id="year"></span> PocketCoder contributors.
+          &middot; <a href="/privacy.html">Privacy</a>
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

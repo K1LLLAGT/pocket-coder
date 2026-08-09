@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Contributing to PocketCoder
 
 Thanks for your interest — we want PocketCoder to be community-driven.
@@ -24,17 +23,16 @@ Branching and PR rules
 - Link PRs to issues (use closes #NNN).
 
 Reporting security issues
-- If you discover a security vulnerability, please privately contact a maintainer (we will publish a security policy soon).
+- Please do not report security vulnerabilities through public GitHub issues. See [SECURITY.md](SECURITY.md) for our security policy and how to report a vulnerability privately.
 
 Issue triage
 - Use labels: bug, enhancement, good-first-issue, help-wanted, docs, security.
 - If you want to help with triage, message maintainers to request access.
-=======
-# Contributing to Acode
 
-Thank you for your interest in contributing to Acode! This guide will help you get started with development.
+## Building the app
 
-## Quick Start Options
+PocketCoder is currently built on the Acode (Cordova/Android) codebase this
+project was forked from, so the build tooling below still applies unchanged.
 
 ### Option 1: DevContainer (Recommended)
 
@@ -42,8 +40,8 @@ Thank you for your interest in contributing to Acode! This guide will help you g
 
 2. Clone and open the repository:
    ```bash
-   git clone https://github.com/Acode-Foundation/Acode.git
-   code Acode
+   git clone https://github.com/K1LLLAGT/pocket-coder.git
+   code pocket-coder
    ```
 
 3. When VS Code prompts "Reopen in Container", click it
@@ -67,17 +65,17 @@ If your editor doesn't support DevContainers, you can use Docker directly:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Acode-Foundation/Acode.git
-cd Acode
+git clone https://github.com/K1LLLAGT/pocket-coder.git
+cd pocket-coder
 
 # Build the Docker image from our Dockerfile
-docker build --target standalone -t acode-dev .devcontainer/
+docker build --target standalone -t pocket-coder-dev .devcontainer/
 
 # Run the container with your code mounted
 docker run -it --rm \
-  -v "$(pwd):/workspaces/acode" \
-  -w /workspaces/acode \
-  acode-dev \
+  -v "$(pwd):/workspaces/pocket-coder" \
+  -w /workspaces/pocket-coder \
+  pocket-coder-dev \
   bash
 
 # Inside the container, run setup and build
@@ -89,18 +87,18 @@ pnpm run build paid dev apk # or pnpm run build p d
 **Keep container running for repeated use:**
 ```bash
 # Start container in background
-docker run -d --name acode-dev \
-  -v "$(pwd):/workspaces/acode" \
-  -w /workspaces/acode \
-  acode-dev \
+docker run -d --name pocket-coder-dev \
+  -v "$(pwd):/workspaces/pocket-coder" \
+  -w /workspaces/pocket-coder \
+  pocket-coder-dev \
   sleep infinity
 
 # Execute commands in the running container
-docker exec -it acode-dev bash -c "pnpm run setup"
-docker exec -it acode-dev pnpm run build paid dev apk
+docker exec -it pocket-coder-dev bash -c "pnpm run setup"
+docker exec -it pocket-coder-dev pnpm run build paid dev apk
 
 # Stop and remove when done
-docker stop acode-dev && docker rm acode-dev
+docker stop pocket-coder-dev && docker rm pocket-coder-dev
 ```
 
 ---
@@ -141,8 +139,8 @@ Some more environment variables, check [cordova docs](https://cordova.apache.org
 
 ```bash
 # Clone the repository
-git clone https://github.com/Acode-Foundation/Acode.git
-cd Acode
+git clone https://github.com/K1LLLAGT/pocket-coder.git
+cd pocket-coder
 
 # Install dependencies and set up Cordova
 pnpm run setup
@@ -153,20 +151,14 @@ pnpm run build paid dev apk # or pnpm run build p d
 
 The APK will be at: `platforms/android/app/build/outputs/apk/debug/app-debug.apk`
 
+### Website (marketing site)
 
-## 📝 Contribution Guidelines
+The `website/` directory is a separate, standalone Vite project for the
+pocket-coder.ai marketing site and is not part of the Cordova build above.
+See [website/README.md](website/README.md) for its own setup and deploy
+instructions.
 
-### Before Submitting a PR
-
-1. **Fork** the repository and create a branch from `main`
-2. **Make changes** - keep commits focused and atomic
-3. **Check code quality:**
-   ```bash
-   pnpm run check
-   ```
-4. **Test** on a device or emulator if possible
-
-### Pull Request Checklist
+## 📝 Pull Request Checklist
 
 - [ ] Clear description of changes
 - [ ] Reference to related issue (if applicable)
@@ -203,7 +195,7 @@ refactor: simplify file loading logic
 
 ## ℹ️ Adding New Icons (to the existing font family)
 > [!NOTE]
-> Acode uses SVG and converts them into a font family, to be used inside the editor and generally for plugin devs.
+> This font-icon workflow is inherited from Acode and converts SVGs into a font family, used inside the editor and generally for plugin devs.
 > 
 > **Plugin-specific icons SHOULD NOT be added into the editor. Only generally helpful icons SHOULD BE added**
 
@@ -216,7 +208,7 @@ Many font editing software and web-based tools exist for this purpose. Some of t
 
 ### Steps in Icomoon to add new Icons
 
-1. Download the `code-editor-icon.icomoon.json` file from https://github.com/Acode-Foundation/Acode/tree/main/utils
+1. Download the `code-editor-icon.icomoon.json` file from the `utils/` directory of this repo.
 2. Go to https://icomoon.io/ > Import
 3. Import the `code-editor-icon.icomoon.json` downloaded (in step 1)
 4. All icons will be displayed after importing.
@@ -231,13 +223,15 @@ Many font editing software and web-based tools exist for this purpose. Some of t
 ### Updating Project files for Icon Contribution
 1. Extract the downloaded zip file; navigate to the `fonts` folder inside it.
 2. Rename `code-editor-icon.ttf` to `icons.ttf`.
-3. Copy & paste the renamed `icons.ttf` into https://github.com/Acode-Foundation/Acode/tree/main/src/res/icons
-4. Copy and paste the `code-editor-icon.icomoon.json` file (downloaded in the adding icons steps) onto https://github.com/Acode-Foundation/Acode/tree/main/utils (yes, replace it with the newer one; we downloaded!)
-4. Commit the changes **ON A NEW branch** (by following: [Commit Messages guide](#commit-messages))
+3. Copy & paste the renamed `icons.ttf` into `src/res/icons/` in this repo.
+4. Copy and paste the `code-editor-icon.icomoon.json` file (downloaded in the adding icons steps) into the `utils/` directory of this repo (yes, replace it with the newer one; we downloaded!)
+5. Commit the changes **ON A NEW branch** (by following: [Commit Messages guide](#commit-messages))
 
 ## 🔌 Plugin Development
 
-To create plugins for Acode:
+PocketCoder inherits Acode's plugin architecture for now:
 - [Plugin Starter Repository](https://github.com/Acode-Foundation/acode-plugin)
 - [Plugin Documentation](https://docs.acode.app/)
->>>>>>> upstream/main
+
+See [ROADMAP.md](ROADMAP.md) for PocketCoder's own plugin API plans, and
+[SECURITY.md](SECURITY.md) for the plugin sandboxing/trust model.

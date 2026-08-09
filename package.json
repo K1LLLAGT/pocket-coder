@@ -1,8 +1,8 @@
 {
-  "name": "com.foxdebug.acode",
-  "displayName": "Acode",
+  "name": "com.pocketcoder.app",
+  "displayName": "PocketCoder",
   "version": "1.12.8",
-  "description": "Acode is a code editor for android",
+  "description": "PocketCoder is a local-first code editor for Android",
   "scripts": {
     "lang": "node ./utils/lang.js",
     "build": "sh utils/scripts/build.sh",
@@ -56,12 +56,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deadlyjack/acode.git"
+    "url": "git+https://github.com/K1LLLAGT/pocket-coder.git"
   },
   "bugs": {
-    "url": "https://github.com/deadlyjack/acode/issues"
+    "url": "https://github.com/K1LLLAGT/pocket-coder/issues"
   },
-  "homepage": "https://github.com/deadlyjack/acode#readme",
+  "homepage": "https://github.com/K1LLLAGT/pocket-coder#readme",
   "devDependencies": {
     "@babel/core": "^8.0.1",
     "@babel/generator": "^7.29.1",

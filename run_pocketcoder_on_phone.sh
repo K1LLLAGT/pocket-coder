@@ -18,13 +18,13 @@ echo "[*] Checking device info..."
   getprop ro.product.model
 } > "$BASE/device_info.txt"
 
-echo "[*] Checking Acode installation..."
+echo "[*] Checking PocketCoder installation..."
 pm list packages | grep -i acode > "$BASE/acode_installed.txt" || true
 
 echo "[*] Capturing Android logs (logcat)..."
 logcat -d > "$BASE/logcat_full.txt"
 
-echo "[*] Filtering Acode logs..."
+echo "[*] Filtering PocketCoder logs..."
 grep -i acode "$BASE/logcat_full.txt" > "$BASE/logcat_acode.txt" || true
 
 echo "[*] Preparing Pocket‑Coder web build test..."
@@ -46,7 +46,7 @@ echo "[*] Testing local server..."
 curl -I "http://127.0.0.1:$PORT" > "$BASE/server_test.txt" || true
 
 echo "[*] Instructions:"
-echo "1. Open Acode"
+echo "1. Open PocketCoder"
 echo "2. Tap 'Open Folder'"
 echo "3. Navigate to: $BASE/web_test/www"
 echo "4. Open index.html"

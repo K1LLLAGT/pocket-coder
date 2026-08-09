@@ -1,4 +1,4 @@
-# Acode - Code Editor for Android
+# PocketCoder - Code Editor for Android
 
 <p align="center">
   <img src='res/logo_1.png' width='250'>
@@ -8,7 +8,7 @@
 
 ## • Overview
 
-Welcome to Acode Editor - a powerful and versatile code editing tool designed specifically for Android devices. Whether you're working on HTML, CSS, JavaScript, or other programming languages, Acode empowers you to code on-the-go with confidence.
+Welcome to PocketCoder - a powerful and versatile code editing tool designed specifically for Android devices. Whether you're working on HTML, CSS, JavaScript, or other programming languages, Acode empowers you to code on-the-go with confidence.
 
 ## • Features
 
@@ -38,7 +38,7 @@ Acode/
 
 ## • Multi-language Support
 
-Enhance Acode's capabilities by adding new languages easily. Just create a file with the language code (e.g., en-us for English) in [`src/lang/`](https://github.com/Acode-Foundation/Acode/tree/main/src/lang) and include it in [`src/lib/lang.js`](https://github.com/Acode-Foundation/Acode/blob/main/src/lib/lang.js). Manage strings across languages effortlessly using utility commands:
+Enhance PocketCoder.s capabilities by adding new languages easily. Just create a file with the language code (e.g., en-us for English) in [`src/lang/`](https://github.com/Acode-Foundation/Acode/tree/main/src/lang) and include it in [`src/lib/lang.js`](https://github.com/Acode-Foundation/Acode/blob/main/src/lib/lang.js). Manage strings across languages effortlessly using utility commands:
 
 ```shell
 pnpm run lang add
@@ -57,9 +57,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
   <img src="https://contrib.rocks/image?repo=Acode-Foundation/Acode" />
 </a>
 
-## • Developing a Plugin for Acode
+## • Developing a Plugin for PocketCoder
 
-For comprehensive documentation on creating plugins for Acode Editor, visit the [repository](https://github.com/Acode-Foundation/acode-plugin).
+For comprehensive documentation on creating plugins for PocketCoder, visit the [repository](https://github.com/Acode-Foundation/acode-plugin).
 
 For plugin development information, refer to: [Acode Plugin Documentation](https://docs.acode.app/)
 

@@ -31,7 +31,9 @@
     "plugins": {
       "cordova-clipboard": {},
       "cordova-plugin-device": {},
-      "cordova-plugin-file": {},
+      "cordova-plugin-file": {
+        "ANDROIDX_WEBKIT_VERSION": "1.4.0"
+      },
       "cordova-plugin-server": {},
       "cordova-plugin-ftp": {},
       "cordova-plugin-sdcard": {},
@@ -50,9 +52,7 @@
       "cordova-plugin-advanced-http": {},
       "cordova-plugin-acode-webview": {}
     },
-    "platforms": [
-      "android"
-    ]
+    "platforms": []
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PocketCoder — Pyodide demo</title>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 16px; background:#f8fafc; color:#0f172a; }
+    textarea { width: 100%; height: 200px; font-family: monospace; }
+    pre { background:#0b1220; color:#c7f9cc; padding:12px; white-space:pre-wrap; }
+    button { margin-top:8px; padding:8px 12px; }
+  </style>
+</head>
+<body>
+  <h1>Pyodide demo</h1>
+  <p>Write Python and run it in the browser (Pyodide CDN).</p>
+  <textarea id="pycode">print('Hello from Pyodide!')</textarea>
+  <br/>
+  <button id="run">Run</button>
+  <h2>Output</h2>
+  <pre id="out"></pre>
+  <script src="adapter.js"></script>
+</body>
+</html>

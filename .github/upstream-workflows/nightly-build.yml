@@ -155,8 +155,8 @@ jobs:
 
       - name: Install deps
         run: |
-          npm install
-          npm install -g cordova
+          /data/data/com.termux/files/usr/data/data/com.termux/files/usr/bin//data/data/com.termux/files/usr/data/data/com.termux/files/usr/bin//data/data/com.termux/files/usr/data/data/com.termux/files/usr/bin//data/data/com.termux/files/usr/bin/npm install
+          /data/data/com.termux/files/usr/data/data/com.termux/files/usr/bin//data/data/com.termux/files/usr/data/data/com.termux/files/usr/bin//data/data/com.termux/files/usr/data/data/com.termux/files/usr/bin//data/data/com.termux/files/usr/bin/npm install -g cordova
           npm run setup
 
       - name: Build normal APK

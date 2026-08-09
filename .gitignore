@@ -32,3 +32,7 @@ src/plugins/proot/package.json
 
 # Generated / temp
 *.orig
+
+# local temp audit files
+acode-actionable.txt
+acode-refs.txt
